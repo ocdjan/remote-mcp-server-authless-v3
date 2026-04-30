@@ -62,35 +62,7 @@ export class MyMCP extends McpAgent {
 				  }
 				}	
 			);
-		
 
-				    // Parse the JSON response
-				    const data = await response.json();
-				    
-				    // Check if the request was successful
-				    if (!response.ok) {
-				      throw new Error(`HTTP error! status: ${response.status}`);
-				    }
-				
-				    return {
-				      content: [
-				        {
-				          type: 'text',
-				          text: JSON.stringify(data, null, 2), // Pretty print the JSON
-				        }
-				      ]
-				    };
-				  } catch (error) {
-				    return {
-				      content: [
-				        {
-				          type: 'text',
-				          text: `Error: ${error.message}`,
-				        }
-				      ]
-				    };
-				  }
-				}	
 
 ///////////////////////////////////////
 
